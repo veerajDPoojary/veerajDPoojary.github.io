@@ -16,7 +16,212 @@
 
 		  gtag('config', 'G-9B5494F06T');
 		</script>
+        <style>
+            body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #443850;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
+.cake {
+  position: absolute;
+  top: 0;
+}
+.layer {
+  position: absolute;
+  margin: 0 auto;
+  width: 300px;
+  border-radius: 150px / 75px;
+  height: 200px;
+}
+.layer-1 {
+  top: 0;
+  z-index: 10;
+  background-color: #bcaa99;
+}
+.layer-2 {
+  top: calc(50px);
+  z-index: 9;
+  background-color: #f2f7f2;
+}
+.layer-3 {
+  top: calc(100px);
+  z-index: 8;
+  background-color: #bcaa99;
+}
+.layer-4 {
+  top: calc(150px);
+  z-index: 7;
+  background-color: #8e5572;
+}
+.layer-top {
+  top: 0;
+  z-index: 12;
+  background: #f2f7f2;
+  height: calc(150px);
+}
+.layer-top-cream1 {
+  position: absolute;
+  width: calc(75px);
+  transform: skew(0deg, 18deg);
+  border-radius: 0 0 78% 40%/0 0 92% 74%;
+  height: calc(50px);
+  top: 123px;
+  left: 74px;
+  background: #e5e7e5;
+  z-index: 11;
+}
+.layer-top-cream2 {
+  position: absolute;
+  width: calc(75px);
+  transform: skew(0deg, 18deg);
+  border-radius: 0 0 78% 40%/0 0 92% 74%;
+  height: calc(50px);
+  top: 123px;
+  left: 16px;
+  background: #e5e7e5;
+  z-index: 11;
+}
+.candle {
+  top: calc(80px - 100px);
+  left: calc(150px - 15px);
+  z-index: 12;
+  background: #bbbe64;
+  width: 30px;
+  height: 100px;
+}
+.candle:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: calc(33.333333333333336px);
+  border-radius: 50%;
+  background: #bbbe64;
+  display: none;
+}
+.candle:before {
+  content: "";
+  position: absolute;
+  background: #ffcb6a;
+  width: calc(30px);
+  height: calc(100px / 2);
+  border-radius: 80%/70%;
+  top: calc(-100px / 2);
+  left: calc(50% - 15px);
+  z-index: 15;
+  box-shadow: 0px 0px 40px #fff, 0 0 75px #fff, 0 0 90px #fff, 0 0 100px #fff;
+  animation: flame 3s infinite ease-in-out;
+}
+.cake {
+  position: relative;
+  top: 110px;
+  width: 300px;
+  margin: 0 auto;
+}
+.msg {
+  position: absolute;
+  top: calc(200px + 300px);
+  font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: #f2f7f2;
+  width: 100%;
+}
+@-moz-keyframes flame {
+  0%, 100% {
+    transform: skewX(5deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #fff, 0 0 90px #fff, 0 0 100px #fff;
+  }
+  25% {
+    transform: skewX(-10deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #ffa500, 0 0 90px #ffa500, 0 0 100px #fff;
+  }
+  50% {
+    transform: skewX(15deg);
+    box-shadow: 0px 0px 40px #ffa500, 0 0 75px #ffa500, 0 0 90px #000, 0 0 100px #fff;
+  }
+  75% {
+    transform: skewX(-2deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #fff, 0 0 90px #fff, 0 0 100px #000;
+  }
+}
+@-webkit-keyframes flame {
+  0%, 100% {
+    transform: skewX(5deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #fff, 0 0 90px #fff, 0 0 100px #fff;
+  }
+  25% {
+    transform: skewX(-10deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #ffa500, 0 0 90px #ffa500, 0 0 100px #fff;
+  }
+  50% {
+    transform: skewX(15deg);
+    box-shadow: 0px 0px 40px #ffa500, 0 0 75px #ffa500, 0 0 90px #000, 0 0 100px #fff;
+  }
+  75% {
+    transform: skewX(-2deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #fff, 0 0 90px #fff, 0 0 100px #000;
+  }
+}
+@-o-keyframes flame {
+  0%, 100% {
+    transform: skewX(5deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #fff, 0 0 90px #fff, 0 0 100px #fff;
+  }
+  25% {
+    transform: skewX(-10deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #ffa500, 0 0 90px #ffa500, 0 0 100px #fff;
+  }
+  50% {
+    transform: skewX(15deg);
+    box-shadow: 0px 0px 40px #ffa500, 0 0 75px #ffa500, 0 0 90px #000, 0 0 100px #fff;
+  }
+  75% {
+    transform: skewX(-2deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #fff, 0 0 90px #fff, 0 0 100px #000;
+  }
+}
+@keyframes flame {
+  0%, 100% {
+    transform: skewX(5deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #fff, 0 0 90px #fff, 0 0 100px #fff;
+  }
+  25% {
+    transform: skewX(-10deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #ffa500, 0 0 90px #ffa500, 0 0 100px #fff;
+  }
+  50% {
+    transform: skewX(15deg);
+    box-shadow: 0px 0px 40px #ffa500, 0 0 75px #ffa500, 0 0 90px #000, 0 0 100px #fff;
+  }
+  75% {
+    transform: skewX(-2deg);
+    box-shadow: 0px 0px 40px #fff, 0 0 75px #fff, 0 0 90px #fff, 0 0 100px #000;
+  }
+}
+
+        </style>
 	</head>
 	<body class="">
-        <h1>Happy Birhtday</h1>
+        <div class="cake">
+            <div class="plate"></div>
+            <div class="layer layer-1"></div>
+            <div class="layer layer-2"></div>
+            <div class="layer layer-3"></div>
+            <div class="layer layer-4"></div>
+            <div class="layer layer-top"></div>
+            <div class="layer layer-top-cream1"></div>
+            <div class="layer layer-top-cream2"></div>
+            <div class="layer candle"></div>
+          
+          </div>
+          <div class="msg">Happy Birthday !!!</div>
     </body>
