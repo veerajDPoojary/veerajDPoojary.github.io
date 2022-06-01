@@ -1,11 +1,6 @@
 var audioplay = document.createElement('audio');
     audioplay.setAttribute('src', 'https://happy-birthday-card.vercel.app/resources/sfx/hbd.mp3');
 
-document.body.addEventListener("mousemove", function () {
-  audioplay.play();
-  audioplay.pause();
-})
-
 // Animation Timeline
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
