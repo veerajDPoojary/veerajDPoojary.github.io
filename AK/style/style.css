@@ -7,6 +7,13 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+.button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .btn {
   display: block;
   height: 50px;
