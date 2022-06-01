@@ -177,7 +177,8 @@ const animationTimeline = () => {
       2.5,
       {
         opacity: 0.9,
-        y: 1400
+        y: 1400,
+        onStart:function(){audioplay.play()}
       },
       {
         opacity: 1,
@@ -212,8 +213,7 @@ const animationTimeline = () => {
         // scale: 0.3,
         rotation: 150,
         skewX: "30deg",
-        ease: Elastic.easeOut.config(1, 0.5),
-        onStart:function(){audioplay.play()}
+        ease: Elastic.easeOut.config(1, 0.5)
       },
       0.1
     )
