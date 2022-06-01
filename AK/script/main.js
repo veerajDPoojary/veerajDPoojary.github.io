@@ -239,8 +239,7 @@ const animationTimeline = () => {
       {
         opacity: 0,
         y: 10,
-        skewX: "-15deg",
-        onComplete:function(){audioplay.pause()}
+        skewX: "-15deg"
       },
       "party"
     )
@@ -259,7 +258,8 @@ const animationTimeline = () => {
     .to(".six", 0.5, {
       opacity: 0,
       y: 30,
-      zIndex: "-1"
+      zIndex: "-1",
+      onComplete:function(){audioplay.pause()}
     })
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
