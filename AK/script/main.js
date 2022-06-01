@@ -259,7 +259,6 @@ const animationTimeline = () => {
       opacity: 0,
       y: 30,
       zIndex: "-1",
-      onComplete:function(){audioplay.pause()}
     })
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
@@ -277,6 +276,7 @@ const animationTimeline = () => {
   // Restart Animation on click
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
+    audioplay.pause();
     tl.restart();
   });
 };
