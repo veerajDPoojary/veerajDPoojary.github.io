@@ -281,5 +281,9 @@ const animationTimeline = () => {
   });
 };
 
-// Run animation
-animationTimeline();
+document.getElementById("start").addEventListener("click", function() {
+  document.getElementById("startContainer").style.display = 'none';
+  // Run animation
+  animationTimeline();
+});
+
