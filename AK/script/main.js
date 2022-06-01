@@ -1,28 +1,5 @@
-// Import the data to customize and insert them into page
-const fetchData = () => {
-  fetch("customize.json")
-    .then(data => data.json())
-    .then(data => {
-      dataArr = Object.keys(data);
-      dataArr.map(customData => {
-        if (data[customData] !== "") {
-          if (customData === "imagePath") {
-            document
-              .querySelector(`[data-node-name*="${customData}"]`)
-              .setAttribute("src", data[customData]);
-          } else {
-            document.querySelector(`[data-node-name*="${customData}"]`).innerText = data[customData];
-          }
-        }
-
-        // Check if the iteration is over
-        // Run amimation if so
-        if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
-          animationTimeline();
-        } 
-      });
-    });
-};
+var audioplay = document.createElement('audio');
+    audioplay.setAttribute('src', 'https://happy-birthday-card.vercel.app/resources/sfx/hbd.mp3');
 
 // Animation Timeline
 const animationTimeline = () => {
@@ -235,7 +212,8 @@ const animationTimeline = () => {
         // scale: 0.3,
         rotation: 150,
         skewX: "30deg",
-        ease: Elastic.easeOut.config(1, 0.5)
+        ease: Elastic.easeOut.config(1, 0.5),
+        onStart:function(){audioplay.play()}
       },
       0.1
     )
@@ -261,7 +239,8 @@ const animationTimeline = () => {
       {
         opacity: 0,
         y: 10,
-        skewX: "-15deg"
+        skewX: "-15deg",
+        onComplete:function(){audioplay.pause()}
       },
       "party"
     )
@@ -302,7 +281,5 @@ const animationTimeline = () => {
   });
 };
 
-// Run fetch and animation in sequence
-//fetchData();
-
+// Run animation
 animationTimeline();
