@@ -172,14 +172,16 @@ body {
 
 .six .ak-dp {
   border-radius: 100%;
-  width: 350px;
 }
 
 .six .hat {
   position: absolute;
   width: 80px;
   top: -90px;
-  left: 46.5%;
+  /* left: 46.5%; */
+  left: 0;
+  right: 0;
+  margin: auto
   /* transform: scale(0.1); */
 }
 
@@ -287,27 +289,27 @@ body {
 
 /* Media Queries */
 @media screen and (max-height: 1000px) {
-  .six .hat {
+  /* .six .hat {
     left: 40%;
-  }
+  } */
 }
 
 @media screen and (max-height: 800px) {
-  .six .hat {
-    left: 37%;
-  }
+  /* .six .hat {
+    left: 45%;
+  } */
 }
 
 @media screen and (max-height: 700px) {
-  .six .hat {
+  /* .six .hat {
     left: 32%;
-  }
+  } */
 }
 
 @media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
-  }
+  /* .six .hat {
+    left: 40%;
+  } */
 }
 
 @media screen and (max-width: 500px) {
@@ -333,8 +335,8 @@ body {
   }
 
   .six .hat {
-    width: 50px;
-    top: -20px;
+    width: 60px;
+    top: -69px;
   }
 
   .wish-hbd {

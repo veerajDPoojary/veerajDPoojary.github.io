@@ -1,5 +1,5 @@
 var audioplay = document.createElement('audio');
-    audioplay.setAttribute('src', 'https://happy-birthday-card.vercel.app/resources/sfx/hbd.mp3');
+    audioplay.setAttribute('src', '/AK/audio/hbd.mp3');
 
 // Animation Timeline
 const animationTimeline = () => {
@@ -167,7 +167,11 @@ const animationTimeline = () => {
         scale: 3,
         opacity: 0,
         rotation: -15,
-        ease: Expo.easeOut
+        ease: Expo.easeOut,
+        onStart:function(){
+          audioplay.currentTime = 0;
+          audioplay.play()
+        }
       },
       0.2,
       "+=1"
@@ -177,8 +181,7 @@ const animationTimeline = () => {
       2.5,
       {
         opacity: 0.9,
-        y: 1400,
-        onStart:function(){audioplay.play()}
+        y: 1400
       },
       {
         opacity: 1,
